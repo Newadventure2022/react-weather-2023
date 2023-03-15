@@ -1,0 +1,16 @@
+.Footer {
+  font-size: 15px;
+  text-align: center;
+  clear: both;
+  position: relative;
+  margin-top: 100px;
+}
+.Footer a {
+  text-decoration: none;
+  color: blue;
+}
+
+.my-name {
+  color: #000;
+  opacity: 0.5;
+}
