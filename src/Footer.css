@@ -3,7 +3,8 @@
   text-align: center;
   clear: both;
   position: relative;
-  margin-top: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .Footer a {
   text-decoration: none;

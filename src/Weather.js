@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
-import logo from "./logo.svg";
-
+import "./Weather.css";
 export default function Weather() {
   function handleResponse(response) {
     alert(`The weather in Valencia is ${response.data.main.temp}°C`);
@@ -10,13 +9,5 @@ export default function Weather() {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Valencia&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(handleResponse);
-  return (
-    <h1>
-      Hello from Weather{" "}
-      <span>
-        {" "}
-        <img src={logo} className="App-logo" alt="logo" />
-      </span>
-    </h1>
-  );
+  return <h1>Hello from Weather </h1>;
 }
