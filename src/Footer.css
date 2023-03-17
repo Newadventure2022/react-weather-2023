@@ -8,10 +8,12 @@
 }
 .Footer a {
   text-decoration: none;
-  color: blue;
+  color: #000;
 }
 
 .my-name {
-  color: #000;
-  opacity: 0.5;
+  color: blue;
+}
+.github {
+  color: blue;
 }

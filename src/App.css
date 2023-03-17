@@ -21,8 +21,10 @@
   min-height: 25vh;
 }
 .col-sm-8 {
-  border-width: 2px;
-  border-color: black;
+  border: solid 3px #e6e9f0;
+}
+.col-sm-4 {
+  border: solid 3px #e6e9f0;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

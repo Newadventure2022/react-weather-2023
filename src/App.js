@@ -11,7 +11,9 @@ function App() {
       <div className="container">
         <header className="weather">
           <div className="row">
-            <div className="col-sm-8">Valencia</div>
+            <div className="col-sm-8">
+              <City />
+            </div>
             <div className="col-sm-4">Hello Friends</div>
           </div>
         </header>

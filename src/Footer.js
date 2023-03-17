@@ -11,12 +11,13 @@ export default function Footer() {
         rel="noreferrer"
         className="Visit"
       >
-        Created with React{" "}
+        Created <span className="my-name"> by Celia Corona-Doran</span> with
+        React{" "}
         <span>
           {" "}
           <img src={logo} className="App-logo" alt="logo" />
         </span>
-        Open-source code <span className="my-name">by Celia Corona-Doran</span>
+        and open-sourced on <span className="github">GitHub</span>
       </a>
     </div>
   );
