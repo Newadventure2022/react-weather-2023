@@ -9,9 +9,5 @@ export default function City() {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Valencia&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(handleResponse);
-  return (
-    <h1>
-      Valencia <span> 🔍 Form</span>
-    </h1>
-  );
+  return <h1>Valencia</h1>;
 }

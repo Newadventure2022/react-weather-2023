@@ -1,4 +1,5 @@
 import React from "react";
+import Search from "./Search";
 import City from "./City";
 import Footer from "./Footer";
 import MidSection from "./MidSection";
@@ -10,12 +11,15 @@ export default function Weather() {
     <div className="weather">
       <header>
         <div className="row">
-          <div className="mainCity col-sm-8">
+          <div className="mainCity col-sm-4">
             <City />
             <div>Day & date</div>
             <div className="temperature">
               21° <span className="description fw-bold">Sunny</span>
             </div>
+          </div>
+          <div className="middleSection col-sm-4">
+            <Search />
           </div>
           <div className="mainSecondary col-sm-4">
             <div className="unit-parent">
