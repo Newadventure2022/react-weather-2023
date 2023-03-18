@@ -1,0 +1,49 @@
+.midSection {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.summary {
+  border: solid 3px green;
+  width: auto;
+  padding: 0;
+  flex: 1;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 0;
+}
+.d-flex {
+  gap: 10px;
+}
+.humidity {
+  border: solid 2px green;
+  width: auto;
+  padding: 0;
+  flex: 1;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 0;
+}
+.wind {
+  border: solid 2px green;
+  width: auto;
+  padding: 0;
+  flex: 1;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 0;
+}
+.pressure {
+  border: solid 2px green;
+  width: auto;
+  padding: 0;
+  flex: 1;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 0;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}

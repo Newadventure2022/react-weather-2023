@@ -1,12 +1,14 @@
 import React from "react";
 import City from "./City";
 import Footer from "./Footer";
+import MidSection from "./MidSection";
+import Forecast from "./Forecast";
 import "./Weather.css";
 
 export default function Weather() {
   return (
-    <div>
-      <header className="weather">
+    <div className="weather">
+      <header>
         <div className="row">
           <div className="mainCity col-sm-8">
             <City />
@@ -15,30 +17,36 @@ export default function Weather() {
               21° <span className="description">Sunny</span>
             </div>
           </div>
-          <div className="otherCities col-sm-4">
-            <ul>
+          <div className="mainSecondary col-sm-4">
+            <div className="unit-parent">
+              <div className="unit">
+                <span className="celsius">C</span> /{" "}
+                <span className="fahrenheit">F</span>
+              </div>
+            </div>
+            <div className="units">Units</div>
+            <ul className="otherCities">
               <li>
-                <div className="units">C / F</div>
-              </li>
-              <li>
-                <div className="dublin">Dublin</div>
-              </li>
-              <li>
-                {" "}
-                <div className="auckland">Auckland</div>
-              </li>
-              <li>
-                {" "}
-                <div className="newYork">New York</div>
+                <div className="cities-element dublin">Dublin</div>
               </li>
               <li>
                 {" "}
-                <div className="sanFrancisco">San Fancisco</div>
+                <div className="cities-element auckland">Auckland</div>
+              </li>
+              <li>
+                {" "}
+                <div className="cities-element newYork">New York</div>
+              </li>
+              <li>
+                {" "}
+                <div className="cities-element sanJose">San Jose</div>
               </li>
             </ul>
           </div>
         </div>
       </header>
+      <MidSection />
+      <Forecast />
       <Footer />
     </div>
   );
