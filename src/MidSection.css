@@ -5,43 +5,29 @@
 }
 
 .summary {
-  border: solid 3px green;
+  text-align: left;
   width: auto;
   padding: 0;
   flex: 1;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 0;
+  margin-left: 20px;
 }
 .d-flex {
-  gap: 10px;
+  justify-content: space-evenly;
 }
-.humidity {
-  border: solid 2px green;
-  width: auto;
-  padding: 0;
-  flex: 1;
+.weatherElements {
+  gap: 1px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 4px 0;
+  overflow: hidden;
 }
-.wind {
-  border: solid 2px green;
+.weather-details {
+  background-color: black;
+  color: white;
   width: auto;
-  padding: 0;
   flex: 1;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 4px 0;
+  padding: 10px 0;
 }
-.pressure {
-  border: solid 2px green;
-  width: auto;
-  padding: 0;
-  flex: 1;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 4px 0;
+.emoji {
+  font-size: 40px;
 }
 .row {
   display: flex;

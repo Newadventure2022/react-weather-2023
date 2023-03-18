@@ -14,7 +14,7 @@ export default function Weather() {
             <City />
             <div>Day & date</div>
             <div className="temperature">
-              21° <span className="description">Sunny</span>
+              21° <span className="description fw-bold">Sunny</span>
             </div>
           </div>
           <div className="mainSecondary col-sm-4">
