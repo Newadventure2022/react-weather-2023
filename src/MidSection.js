@@ -8,7 +8,7 @@ export default function MidSection() {
         <div className="row">
           <div className="summary col-sm-6">
             {" "}
-            <div class="big-box fs- fw-bold">Daily Summary</div>
+            <div className="big-box fs- fw-bold">Daily Summary</div>
             <p>
               Attention: This weather app is a work in progress. I am changing
               the design of my app and it still needed a lot of work. It is

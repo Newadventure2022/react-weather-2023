@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Search from "./Search";
 import MidSection from "./MidSection";
-import Icon from "./Icon";
+import WeatherIcon from "./WeatherIcon";
 import Forecast from "./Forecast";
 import "./Weather.css";
 
@@ -14,9 +14,10 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      description: response.data.weather[0].main,
+      icon: response.data.weather[0].icon,
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
-      description: response.data.weather[0].main,
     });
   }
   function handleSubmit(event) {
@@ -41,7 +42,7 @@ export default function Weather(props) {
               <h1>{weatherData.city}</h1>
               <div>Day & date</div>
               <div className="temperature">
-                {Math.round(weatherData.temperature)}{" "}
+                {Math.round(weatherData.temperature)}°
                 <span className="description fw-bold">
                   {weatherData.description}
                 </span>
@@ -53,8 +54,10 @@ export default function Weather(props) {
                 handleSubmit={handleSubmit}
                 handleCityChange={handleCityChange}
               />
-              <div className="icon">
-                <Icon />
+              <div className="WeatherIcon">
+                <div>
+                  <WeatherIcon code={weatherData.icon} />
+                </div>
               </div>
             </div>
             <div className="mainSecondary col-sm-4">
