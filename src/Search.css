@@ -8,6 +8,7 @@ form {
   margin-left: auto;
 }
 input[type="text"] {
+  background-color: transparent;
   border-radius: 30px;
   height: 40px;
   padding-left: 16px;
@@ -31,5 +32,6 @@ input[type="submit"] {
   top: 0;
 }
 input[type="submit"]:hover {
-  background-color: #0a4bad;
+  background-color: rgba(252, 225, 164);
+  color: black;
 }
