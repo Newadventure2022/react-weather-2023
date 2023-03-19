@@ -1,14 +1,15 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
+import "./Icon.css";
 
 const defaults = {
   icon: "CLEAR_DAY",
   color: "goldenrod",
-  size: 512,
+  size: 125,
   animate: true,
 };
 
-const App = () => (
+const Icon = () => (
   <ReactAnimatedWeather
     icon={defaults.icon}
     color={defaults.color}

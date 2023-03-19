@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./Search.css";
 
 export default function Search(props) {
@@ -12,8 +11,9 @@ export default function Search(props) {
               <input
                 type="text"
                 id="city-search"
-                placeholder="Search for a new city"
+                placeholder="Enter a city..."
                 autoComplete="off"
+                autoFocus="on"
                 className="form-control"
                 onChange={props.handleCityChange}
                 value={props.city}

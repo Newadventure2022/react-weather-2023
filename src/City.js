@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./City.css";
+
 export default function City() {
   function handleResponse(response) {
     alert(`The weather in Valencia is ${response.data.main.temp}°C`);
