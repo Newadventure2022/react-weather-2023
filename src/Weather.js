@@ -21,12 +21,9 @@ export default function Weather(props) {
   }
   function handleSubmit(event) {
     event.preventDefault();
-    //Reset city state variable to an empty string for WeatherSearch's input
     setCity("");
 
-    //Get city name value from event object
     const cityName = event.target[0].value;
-    //Use city name value from event, as an url param for new request.
     const apiKey = "5293d8454b519c30f6f6331f38c85b4c";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
@@ -94,7 +91,7 @@ export default function Weather(props) {
     );
   } else {
     const apiKey = "5293d8454b519c30f6f6331f38c85b4c";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Valencia&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }
