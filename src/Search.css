@@ -32,6 +32,6 @@ input[type="submit"] {
   top: 0;
 }
 input[type="submit"]:hover {
-  background-color: rgba(252, 225, 164);
+  background-color: rgba(252, 225, 164, 0.6);
   color: black;
 }
