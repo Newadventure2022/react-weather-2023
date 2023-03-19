@@ -1,37 +1,61 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Search from "./Search";
-import City from "./City";
 import MidSection from "./MidSection";
 import Icon from "./Icon";
 import Forecast from "./Forecast";
 import "./Weather.css";
 
-export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState("");
+
   function handleResponse(response) {
     console.log(response.data);
-    setTemperature(response.data.main.temp);
-    setReady(true);
+    setWeatherData({
+      ready: true,
+      city: response.data.name,
+      temperature: Math.round(response.data.main.temp),
+      description: response.data.weather[0].main,
+    });
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    //Reset city state variable to an empty string for WeatherSearch's input
+    setCity("");
+
+    //Get city name value from event object
+    const cityName = event.target[0].value;
+    //Use city name value from event, as an url param for new request.
+    const apiKey = "5293d8454b519c30f6f6331f38c85b4c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
-  if (ready) {
-    const apiKey = "5293d8454b519c30f6f6331f38c85b4c";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Valencia&appid=${apiKey}&units=metric`;
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+  if (weatherData.ready) {
     return (
       <div className="weather">
         <header>
           <div className="row">
             <div className="mainCity col-sm-4">
-              <City />
+              <h1>{weatherData.city}</h1>
               <div>Day & date</div>
               <div className="temperature">
-                21° <span className="description fw-bold">Sunny</span>
+                {Math.round(weatherData.temperature)}{" "}
+                <span className="description fw-bold">
+                  {weatherData.description}
+                </span>
               </div>
             </div>
             <div className="middleSection col-sm-4">
-              <Search />
+              <Search
+                city={city}
+                handleSubmit={handleSubmit}
+                handleCityChange={handleCityChange}
+              />
               <div className="icon">
                 <Icon />
               </div>
