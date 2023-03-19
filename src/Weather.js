@@ -1,7 +1,6 @@
 import React from "react";
 import Search from "./Search";
 import City from "./City";
-import Footer from "./Footer";
 import MidSection from "./MidSection";
 import Forecast from "./Forecast";
 import "./Weather.css";
@@ -51,7 +50,6 @@ export default function Weather() {
       </header>
       <MidSection />
       <Forecast />
-      <Footer />
     </div>
   );
 }

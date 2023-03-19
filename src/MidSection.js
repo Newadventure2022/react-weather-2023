@@ -8,13 +8,12 @@ export default function MidSection() {
         <div className="row">
           <div className="summary col-sm-6">
             {" "}
-            <div class="big-box fs- fw-bold">Summary</div>
+            <div class="big-box fs- fw-bold">Daily Summary</div>
             <p>
-              Pressure is usually around 1000hPa, and at sea level, it rarely
-              gets lower than 950hPa or higher than 1050 hPa. So high pressure
-              gives fine, dry weather – warm in summer (remember how glorious
-              July was!) but with cold nights in winter. But on the other hand,
-              low pressure brings clouds, rain and strong winds.
+              Attention: This weather app is a work in progress. I am changing
+              the design of my app and it still needed a lot of work. It is
+              current ready only for the SheCodes React week five homework: due
+              Monday, 20 March.
             </p>
           </div>
 
