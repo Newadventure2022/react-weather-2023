@@ -60,6 +60,7 @@ export default function Weather(props) {
                   unit={unit}
                 />
               </div>
+
               <span className="description fw-bold">
                 {weatherData.description}
               </span>
@@ -78,7 +79,8 @@ export default function Weather(props) {
             </div>
             <div className="mainSecondary col-sm-4">
               <div className="unit-parent">
-                <div className="unit">
+                <div className="temp-display"></div>
+                <div className="unit" id="temp-display">
                   <span className="celsius" onClick={convertCelsius}>
                     C
                   </span>{" "}
