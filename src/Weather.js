@@ -3,6 +3,7 @@ import axios from "axios";
 import Search from "./Search";
 import MidSection from "./MidSection";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemp from "./WeatherTemp";
 import Forecast from "./Forecast";
 import "./Weather.css";
 
@@ -41,12 +42,12 @@ export default function Weather(props) {
             <div className="mainCity col-sm-4">
               <h1>{weatherData.city}</h1>
               <div>Day & date</div>
-              <div className="temperature">
-                {Math.round(weatherData.temperature)}°
-                <span className="description fw-bold">
-                  {weatherData.description}
-                </span>
+              <div className="temp-display">
+                <WeatherTemp temp={Math.round(weatherData.temperature)} />
               </div>
+              <span className="description fw-bold">
+                {weatherData.description}
+              </span>
             </div>
             <div className="middleSection col-sm-4">
               <Search
@@ -63,7 +64,7 @@ export default function Weather(props) {
             <div className="mainSecondary col-sm-4">
               <div className="unit-parent">
                 <div className="unit">
-                  <span className="celsius">C</span> /{" "}
+                  <span className="celsius">C</span> /
                   <span className="fahrenheit">F</span>
                 </div>
               </div>
