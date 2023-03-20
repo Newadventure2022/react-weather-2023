@@ -10,6 +10,7 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState("");
+  const [unit, setUnit] = useState("metric");
 
   function handleResponse(response) {
     console.log(response.data);
@@ -34,6 +35,17 @@ export default function Weather(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
   }
+
+  function convertCelsius(event) {
+    event.preventDefault();
+    setUnit("metric");
+  }
+
+  function convertFahrenheit(event) {
+    event.preventDefault();
+    setUnit("imperial");
+  }
+
   if (weatherData.ready) {
     return (
       <div className="weather">
@@ -43,7 +55,10 @@ export default function Weather(props) {
               <h1>{weatherData.city}</h1>
               <div>Day & date</div>
               <div className="temp-display">
-                <WeatherTemp temp={Math.round(weatherData.temperature)} />
+                <WeatherTemp
+                  temp={Math.round(weatherData.temperature)}
+                  unit={unit}
+                />
               </div>
               <span className="description fw-bold">
                 {weatherData.description}
@@ -64,8 +79,13 @@ export default function Weather(props) {
             <div className="mainSecondary col-sm-4">
               <div className="unit-parent">
                 <div className="unit">
-                  <span className="celsius">C</span> /
-                  <span className="fahrenheit">F</span>
+                  <span className="celsius" onClick={convertCelsius}>
+                    C
+                  </span>{" "}
+                  /
+                  <span className="fahrenheit" onClick={convertFahrenheit}>
+                    F
+                  </span>
                 </div>
               </div>
               <div className="units">Units</div>
