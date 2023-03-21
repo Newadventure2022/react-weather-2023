@@ -22,12 +22,13 @@ ul {
 }
 
 .temp-display {
-  margin-top: 5px;
   font-size: 90px;
+  clear: both;
 }
 .description {
-  margin-top: 5px;
   font-size: 20px;
+  font-weight: 600;
+  margin-left: 5px;
 }
 .unit-parent {
   display: flex;

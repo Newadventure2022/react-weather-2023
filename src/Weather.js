@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Search from "./Search";
 import MidSection from "./MidSection";
-
+import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemp from "./WeatherTemp";
 import Forecast from "./Forecast";
@@ -20,10 +20,12 @@ export default function Weather(props) {
       description: response.data.weather[0].main,
       icon: response.data.weather[0].icon,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       pressure: response.data.main.pressure,
+      coordinates: response.data.coord,
     });
   }
   function handleSubmit(event) {
@@ -57,7 +59,15 @@ export default function Weather(props) {
           <div className="row">
             <div className="mainCity col-sm-4">
               <h1>{weatherData.city}</h1>
-              <div className="currentDate">Day & date</div>
+              <div className="date-heading">
+                <FormattedDate date={weatherData.date} />
+              </div>
+              <div className="WeatherIcon">
+                <WeatherIcon code={weatherData.icon} />
+              </div>
+              <span className="description mt-5 fs-5">
+                {weatherData.description}
+              </span>
               <div className="temp-display">
                 <WeatherTemp
                   temp={Math.round(weatherData.temperature)}
@@ -71,17 +81,6 @@ export default function Weather(props) {
                 handleSubmit={handleSubmit}
                 handleCityChange={handleCityChange}
               />
-              <div>
-                {" "}
-                <span className="description mt-5 fs-3 fw-bold">
-                  {weatherData.description}
-                </span>
-              </div>
-              <div className="WeatherIcon">
-                <div>
-                  <WeatherIcon code={weatherData.icon} />
-                </div>
-              </div>
             </div>
             <div className="mainSecondary col-sm-4">
               <div className="unit-parent">

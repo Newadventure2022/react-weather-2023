@@ -20,15 +20,15 @@ export default function MidSection(props) {
           <div className="col-sm-6">
             <div className="weatherElements d-flex">
               <div className="humidity weather-details">
-                Humidity:<div className="emoji">💦</div>
-                <div>{props.humidiy} </div>
+                Humidity:<div className="emoji"> ♨</div>
+                <div>{props.humidity} </div>
               </div>
               <div className="wind weather-details">
                 Wind: <div className="emoji">🌬️</div>
                 <div>{props.wind}</div>
               </div>
               <div className="pressure weather-details">
-                Pressure: <div className="emoji">🔃</div>{" "}
+                Pressure: <div className="emoji">✈🛬✈</div>{" "}
                 <div>{props.pressure} </div>{" "}
               </div>
             </div>

@@ -11,7 +11,7 @@ export default function WeatherTemp(props) {
     let fahrenheit = Math.round(props.temp * 9) / 5 + 32;
     return (
       <div className="TempConversion">
-        <div className="temp-display">{Math.round(fahrenheit)}</div>
+        <div className="temp-display">{Math.round(fahrenheit)}°</div>
       </div>
     );
   }
