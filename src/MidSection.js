@@ -1,7 +1,7 @@
 import React from "react";
 import "./MidSection.css";
 
-export default function MidSection() {
+export default function MidSection(props) {
   return (
     <div>
       <div className="midSection">
@@ -21,14 +21,15 @@ export default function MidSection() {
             <div className="weatherElements d-flex">
               <div className="humidity weather-details">
                 Humidity:<div className="emoji">💦</div>
-                <div>75% </div>
+                <div>{props.humidiy} </div>
               </div>
               <div className="wind weather-details">
                 Wind: <div className="emoji">🌬️</div>
-                <div>4km/h </div>
+                <div>{props.wind}</div>
               </div>
               <div className="pressure weather-details">
-                Pressure: <div className="emoji">🔃</div> <div>1015hPa </div>{" "}
+                Pressure: <div className="emoji">🔃</div>{" "}
+                <div>{props.pressure} </div>{" "}
               </div>
             </div>
           </div>

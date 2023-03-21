@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Search from "./Search";
 import MidSection from "./MidSection";
+
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemp from "./WeatherTemp";
 import Forecast from "./Forecast";
@@ -20,6 +21,9 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      pressure: response.data.main.pressure,
     });
   }
   function handleSubmit(event) {
@@ -113,7 +117,13 @@ export default function Weather(props) {
             </div>
           </div>
         </header>
-        <MidSection />
+        <div className="otherElements">
+          <MidSection
+            humidity={Math.round(weatherData.humidity)}
+            wind={Math.round(weatherData.wind)}
+            pressure={Math.round(weatherData.pressure)}
+          />
+        </div>
         <Forecast />
       </div>
     );
