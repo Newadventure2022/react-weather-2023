@@ -14,11 +14,19 @@ ul {
   text-align: left;
   padding-left: 15px;
 }
+.currentDate {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  padding-left: 10px;
+}
 
 .temp-display {
-  font-size: 70px;
+  margin-top: 5px;
+  font-size: 90px;
 }
 .description {
+  margin-top: 5px;
   font-size: 20px;
 }
 .unit-parent {
@@ -40,7 +48,7 @@ ul {
   display: flex;
   justify-content: flex-end;
   margin-right: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 .celsius {
   background-color: black;
@@ -68,6 +76,7 @@ ul {
 }
 
 .otherCities li {
+  margin-top: 5px;
   font-size: 15px;
   float: right;
   display: block;

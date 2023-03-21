@@ -53,17 +53,13 @@ export default function Weather(props) {
           <div className="row">
             <div className="mainCity col-sm-4">
               <h1>{weatherData.city}</h1>
-              <div>Day & date</div>
+              <div className="currentDate">Day & date</div>
               <div className="temp-display">
                 <WeatherTemp
                   temp={Math.round(weatherData.temperature)}
                   unit={unit}
-                />
-              </div>
-
-              <span className="description fw-bold">
-                {weatherData.description}
-              </span>
+                />{" "}
+              </div>{" "}
             </div>
             <div className="middleSection col-sm-4">
               <Search
@@ -71,6 +67,12 @@ export default function Weather(props) {
                 handleSubmit={handleSubmit}
                 handleCityChange={handleCityChange}
               />
+              <div>
+                {" "}
+                <span className="description mt-5 fs-3 fw-bold">
+                  {weatherData.description}
+                </span>
+              </div>
               <div className="WeatherIcon">
                 <div>
                   <WeatherIcon code={weatherData.icon} />

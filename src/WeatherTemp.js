@@ -4,7 +4,7 @@ export default function WeatherTemp(props) {
   if (props.unit === "metric") {
     return (
       <div className="TempConversion">
-        <div className="temp-display">{props.temp}</div>
+        <div className="temp-display">{props.temp}°</div>
       </div>
     );
   } else {

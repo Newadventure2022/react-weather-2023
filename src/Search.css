@@ -1,5 +1,6 @@
 .city-search {
   display: flex;
+  margin-bottom: 7px;
 }
 
 form {
