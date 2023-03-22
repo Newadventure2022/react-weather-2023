@@ -1,11 +1,11 @@
 .App {
-  max-width: 600;
   margin: 30px auto;
   text-align: center;
   font-weight: 600;
 }
 
 .container {
+  max-width: 800px;
   border: solid 1px rgba(247, 254, 253, 0.6);
   background: radial-gradient(
     circle at 5% 10%,

@@ -8,24 +8,21 @@
   text-align: center;
 }
 
-.weekly-forecast .col-2 {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  width: auto;
-  padding: 0;
-  flex: 1;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 0;
+.weekly-forecast > .row {
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.weekly-forecast .row {
+.weekDays {
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 10px 15px;
   display: flex;
-  gap: 15px;
 }
 
 .weekly-forecast-date {
   font-size: 16px;
-  color: #fff;
+  color: black;
 }
 .weekly-forecast-temp {
   font-size: 14px;

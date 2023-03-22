@@ -12,7 +12,7 @@ export default function MidSection(props) {
             <p>Write something about the humidity, wind, and, pressure</p>
           </div>
 
-          <div className="col-sm-6 fs-4">
+          <div className="col-sm-6 fs-6">
             <div className="weatherElements d-flex">
               <div className="humidity weather-details">
                 Humidity<div className="emoji">𓄺</div>
