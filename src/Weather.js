@@ -26,6 +26,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       pressure: response.data.main.pressure,
       coordinates: response.data.coord,
+      apiKey: "5293d8454b519c30f6f6331f38c85b4c",
     });
   }
   function handleSubmit(event) {
@@ -62,18 +63,19 @@ export default function Weather(props) {
               <div className="date-heading">
                 <FormattedDate date={weatherData.date} />
               </div>
+              <div className="temp-display">
+                <WeatherTemp
+                  temp={Math.round(weatherData.temperature)}
+                  unit={unit}
+                />
+              </div>
+
               <div className="WeatherIcon">
                 <WeatherIcon code={weatherData.icon} />
               </div>
               <span className="description mt-5 fs-5">
                 {weatherData.description}
               </span>
-              <div className="temp-display">
-                <WeatherTemp
-                  temp={Math.round(weatherData.temperature)}
-                  unit={unit}
-                />{" "}
-              </div>{" "}
             </div>
             <div className="middleSection col-sm-4">
               <Search
@@ -81,7 +83,7 @@ export default function Weather(props) {
                 handleSubmit={handleSubmit}
                 handleCityChange={handleCityChange}
               />
-            </div>
+            </div>{" "}
             <div className="mainSecondary col-sm-4">
               <div className="unit-parent">
                 <div className="temp-display"></div>
@@ -123,7 +125,10 @@ export default function Weather(props) {
             pressure={Math.round(weatherData.pressure)}
           />
         </div>
-        <Forecast />
+        <Forecast
+          coordinates={weatherData.coordinates}
+          apiKey="5293d8454b519c30f6f6331f38c85b4c"
+        />
       </div>
     );
   } else {

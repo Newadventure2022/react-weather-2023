@@ -2,3 +2,38 @@
   border: solid 3px rgb(21, 6, 8);
   margin-bottom: 20px;
 }
+
+.weekly-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weekly-forecast .col-2 {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: auto;
+  padding: 0;
+  flex: 1;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 0;
+}
+
+.weekly-forecast .row {
+  display: flex;
+  gap: 15px;
+}
+
+.weekly-forecast-date {
+  font-size: 16px;
+  color: #fff;
+}
+.weekly-forecast-temp {
+  font-size: 14px;
+}
+.weekly-forecast .weekly-high {
+  color: black;
+  opacity: none;
+}
+.weekly-forecast .weekly-low {
+  color: black;
+}
