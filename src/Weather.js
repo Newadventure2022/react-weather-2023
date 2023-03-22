@@ -14,7 +14,7 @@ export default function Weather(props) {
   const [unit, setUnit] = useState("metric");
 
   function handleResponse(response) {
-    console.log(response.data);
+    console.log("response", response);
     setWeatherData({
       ready: true,
       description: response.data.weather[0].main,
