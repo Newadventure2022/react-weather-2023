@@ -1,19 +1,7 @@
 .midSection {
-  margin-top: 20px;
-  margin-bottom: 20px;
   text-align: center;
 }
 
-.summary {
-  text-align: left;
-  width: auto;
-  padding: 0;
-  flex: 1;
-  margin-left: 20px;
-}
-.d-flex {
-  justify-content: space-evenly;
-}
 .otherElements {
   margin-bottom: 50px;
   border: 1px solid #000;
@@ -29,7 +17,7 @@
   color: #000;
   width: auto;
   flex: 1;
-  padding: 0 auto;
+  padding: 10px 0;
   background-color: white;
 }
 .emoji {
