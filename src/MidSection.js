@@ -9,7 +9,12 @@ export default function MidSection(props) {
           <div className="summary col-sm-6">
             {" "}
             <div className="big-box fs- fw-bold">Daily Summary</div>
-            <p>Write something about the humidity, wind, and, pressure</p>
+            <p>
+              My React Weather App was created using HTML, CSS, React
+              Javascript, Bootsrap, Flexbox, VS Code, Terminal, NPM, Axios, API,
+              and Google Fonts. It is open-sourced on GitHub and hosted on
+              Netlify{" "}
+            </p>
           </div>
 
           <div className="col-sm-6 fs-6">

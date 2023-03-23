@@ -57,8 +57,18 @@ export default function Weather(props) {
     return (
       <div className="weather">
         <header>
+          <div>
+            {" "}
+            <div className="newSection">
+              <Search
+                city={city}
+                handleSubmit={handleSubmit}
+                handleCityChange={handleCityChange}
+              />
+            </div>{" "}
+          </div>
           <div className="row">
-            <div className="mainCity col-sm-4">
+            <div className="mainCity col-sm-6">
               <h1>{weatherData.city}</h1>
               <div className="date-heading">
                 <FormattedDate date={weatherData.date} />
@@ -77,14 +87,8 @@ export default function Weather(props) {
                 {weatherData.description}
               </span>
             </div>
-            <div className="middleSection col-sm-4">
-              <Search
-                city={city}
-                handleSubmit={handleSubmit}
-                handleCityChange={handleCityChange}
-              />
-            </div>{" "}
-            <div className="mainSecondary col-sm-4">
+
+            <div className="mainSecondary col-sm-6">
               <div className="unit-parent">
                 <div className="temp-display"></div>
                 <div className="unit" id="temp-display">
@@ -98,23 +102,6 @@ export default function Weather(props) {
                 </div>
               </div>
               <div className="units">Units</div>
-              <ul className="otherCities">
-                <li>
-                  <div className="cities-element dublin">Dublin</div>
-                </li>
-                <li>
-                  {" "}
-                  <div className="cities-element auckland">Auckland</div>
-                </li>
-                <li>
-                  {" "}
-                  <div className="cities-element newYork">New York</div>
-                </li>
-                <li>
-                  {" "}
-                  <div className="cities-element sanJose">San Jose</div>
-                </li>
-              </ul>
             </div>
           </div>
         </header>
