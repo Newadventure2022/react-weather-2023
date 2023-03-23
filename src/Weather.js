@@ -73,45 +73,50 @@ export default function Weather(props) {
               <div className="date-heading">
                 <FormattedDate date={weatherData.date} />
               </div>
-              <div className="temp-display">
-                <WeatherTemp
-                  temp={Math.round(weatherData.temperature)}
-                  unit={unit}
-                />
-              </div>
-
-              <div className="WeatherIcon">
-                <WeatherIcon code={weatherData.icon} />
-              </div>
-              <span className="description mt-5 fs-5">
-                {weatherData.description}
-              </span>
-            </div>
-
-            <div className="mainSecondary col-sm-6">
-              <div className="unit-parent">
-                <div className="temp-display"></div>
-                <div className="unit" id="temp-display">
-                  <span className="celsius" onClick={convertCelsius}>
-                    C
-                  </span>{" "}
-                  /
-                  <span className="fahrenheit" onClick={convertFahrenheit}>
-                    F
+              <div className="temp-display_wrapper">
+                <div className="temp-display">
+                  <WeatherTemp
+                    temp={Math.round(weatherData.temperature)}
+                    unit={unit}
+                  />
+                </div>
+                <div className="description-icon">
+                  <span className="description fs-5">
+                    {weatherData.description}
+                  </span>
+                  <span className="WeatherIcon">
+                    <WeatherIcon code={weatherData.icon} />
                   </span>
                 </div>
               </div>
-              <div className="units">Units</div>
+            </div>
+            <div className="mainSecondary col-sm-6">
+              <div className="unit-wrapper">
+                <div className="unit-parent">
+                  <div className="temp-display"></div>
+                  <div className="unit" id="temp-display">
+                    <span className="celsius" onClick={convertCelsius}>
+                      C
+                    </span>{" "}
+                    /
+                    <span className="fahrenheit" onClick={convertFahrenheit}>
+                      F
+                    </span>
+                  </div>
+                </div>
+                <div className="units">Units</div>
+              </div>
+              <div className="otherElements">
+                <MidSection
+                  humidity={Math.round(weatherData.humidity)}
+                  wind={Math.round(weatherData.wind)}
+                  pressure={Math.round(weatherData.pressure)}
+                />
+              </div>
             </div>
           </div>
         </header>
-        <div className="otherElements">
-          <MidSection
-            humidity={Math.round(weatherData.humidity)}
-            wind={Math.round(weatherData.wind)}
-            pressure={Math.round(weatherData.pressure)}
-          />
-        </div>
+
         <Forecast
           coordinates={weatherData.coordinates}
           apiKey="5293d8454b519c30f6f6331f38c85b4c"

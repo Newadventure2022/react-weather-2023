@@ -10,7 +10,7 @@
 
 .weekly-forecast > .row {
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
   margin: 0 auto;
 }
 
@@ -19,6 +19,8 @@
   border-radius: 8px;
   padding: 10px 15px;
   display: flex;
+  width: auto;
+  gap: 10px;
 }
 
 .weekly-forecast-date {

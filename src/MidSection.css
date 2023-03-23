@@ -1,5 +1,4 @@
 .midSection {
-  border-bottom: 3px solid;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
@@ -15,23 +14,24 @@
 .d-flex {
   justify-content: space-evenly;
 }
+.otherElements {
+  margin-bottom: 50px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background: black;
+}
 .weatherElements {
   gap: 1px;
   border-radius: 8px;
   overflow: hidden;
 }
 .weather-details {
-  background-color: black;
-  color: white;
+  color: #000;
   width: auto;
   flex: 1;
-  padding: 10px 0;
+  padding: 0 auto;
+  background-color: white;
 }
 .emoji {
   font-size: 40px;
-  
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
 }
