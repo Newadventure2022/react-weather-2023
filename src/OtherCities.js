@@ -8,10 +8,10 @@
   </li>
   <li>
     {" "}
-    <div className="cities-element newYork">New York</div>
+    <div className="cities-element newYork">Paris</div>
   </li>
   <li>
     {" "}
-    <div className="cities-element sanJose">San Jose</div>
+    <div className="cities-element sanJose">Barcelona</div>
   </li>
 </ul>;

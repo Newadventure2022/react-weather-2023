@@ -16,7 +16,7 @@ export default function MidSection(props) {
           <div>{props.wind}km/h</div>
         </div>
         <div className="pressure weather-details">
-          Pressure<div className="emoji">༄</div> <div>{props.pressure} </div>{" "}
+          Pressure<div className="emoji">༄</div> <div>{props.pressure}</div>{" "}
         </div>
       </div>
     </div>
