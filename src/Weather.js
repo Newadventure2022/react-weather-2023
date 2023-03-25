@@ -129,14 +129,27 @@ export default function Weather(props) {
             <OtherCities city="San Francisco" />
           </span>
           <span className="cities d-flex">
+            <img src="/images/New York.png" alt="New York" />
+            <OtherCities city="New York" />
+          </span>{" "}
+          <span className="cities d-flex">
+            <img src="/images/London.png" alt="London" />
+            <OtherCities city="London" />
+          </span>
+          <span className="cities d-flex">
             <img src="/images/Paris.png" alt="Paris" />
             <OtherCities city="Paris" />
           </span>
           <span className="cities d-flex">
             <img src="/images/Barcelona.png" alt="Barcelona" />
             <OtherCities city="Barcelona" />
+          </span>{" "}
+          <span className="cities d-flex">
+            <img src="/images/Cape Town.png" alt="Cape Town" />
+            <OtherCities city="Cape Town" />
           </span>
         </div>
+        <p className="scroll fs-8">Scroll to see more cities</p>
         <div>
           <div className="forecastTitle"> 7 Day Forecasts</div>
           <Forecast
