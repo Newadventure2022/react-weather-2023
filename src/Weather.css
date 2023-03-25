@@ -1,9 +1,12 @@
 header {
   margin-top: 15px;
-  border-bottom: 3px solid;
+  border-bottom: 1px solid;
 }
 ul {
   list-style: none;
+}
+img {
+  height: 50px;
 }
 .weather {
   padding-left: 40px;
@@ -39,7 +42,7 @@ ul {
   /* border: solid red 2px; */
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: flex-end;
   margin-bottom: 50px;
   margin-left: -50px;
   gap: 10px;
@@ -95,4 +98,16 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 2px;
+}
+.otherCities {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid;
+  border: 2px solid red;
+  justify-content: space-evenly;
+}
+
+.cityText {
+  margin: auto;
+  font-size: 15px;
 }

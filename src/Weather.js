@@ -6,6 +6,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemp from "./WeatherTemp";
 import Forecast from "./Forecast";
+import OtherCities from "./OtherCities";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -25,6 +26,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       pressure: response.data.main.pressure,
+
       coordinates: response.data.coord,
       apiKey: "5293d8454b519c30f6f6331f38c85b4c",
     });
@@ -116,11 +118,30 @@ export default function Weather(props) {
             </div>
           </div>
         </header>
-
-        <Forecast
-          coordinates={weatherData.coordinates}
-          apiKey="5293d8454b519c30f6f6331f38c85b4c"
-        />
+        <div className="otherCities d-flex">
+          <span className="cities d-flex">
+            <img src="/images/Sydney.png" alt="Sydney" />
+            <OtherCities city="Sydney" />
+          </span>
+          <span className="cities d-flex">
+            <img src="/images/San Francisco.png" alt="Paris" />
+            <OtherCities city="San Francisco" />
+          </span>
+          <span className="cities d-flex">
+            <img src="/images/Paris.png" alt="Paris" />
+            <OtherCities city="Paris" />
+          </span>
+          <span className="cities d-flex">
+            <img src="/images/Barcelona.png" alt="Barcelona" />
+            <OtherCities city="Barcelona" />
+          </span>
+        </div>
+        <div>
+          <Forecast
+            coordinates={weatherData.coordinates}
+            apiKey="5293d8454b519c30f6f6331f38c85b4c"
+          />
+        </div>
       </div>
     );
   } else {
