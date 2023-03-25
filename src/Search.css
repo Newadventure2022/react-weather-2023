@@ -3,10 +3,10 @@
 }
 
 form {
-  display: block;
-  position: sticky;
-  margin-left: auto;
-  margin-top: 50px;
+  display: flex;
+  position: relative;
+  width: auto;
+  margin-top: 25px;
 }
 input[type="text"] {
   background-color: transparent;
