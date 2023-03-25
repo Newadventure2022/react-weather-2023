@@ -16,12 +16,14 @@
 }
 
 .weekDays {
-  border: 1px solid #000;
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
   border-radius: 8px;
   padding: 10px 15px;
   display: flex;
   width: auto;
   gap: 10px;
+  margin-bottom: 15px;
 }
 
 .weekly-forecast-date {

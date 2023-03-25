@@ -59,103 +59,105 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="weather">
-        <header>
-          <div class="container-fluid">
-            <div className="newSection">
-              <Search
-                city={city}
-                handleSubmit={handleSubmit}
-                handleCityChange={handleCityChange}
-              />
-            </div>
-          </div>
-          <div className="row">
-            <div className="mainCity col-sm-6">
-              <h1>{weatherData.city}</h1>
-
-              <div className="date-heading">
-                <FormattedDate date={weatherData.date} />
-              </div>
-              <div className="temp-display_wrapper">
-                <div className="temp-display">
-                  <WeatherTemp
-                    temp={Math.round(weatherData.temperature)}
-                    unit={unit}
-                  />
-                </div>
-                <div className="description-icon">
-                  <span className="description fs-5">
-                    {weatherData.description}
-                  </span>
-                  <span className="WeatherIcon">
-                    <WeatherIcon code={weatherData.icon} />
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="mainSecondary col-sm-6">
-              <div className="unit-wrapper">
-                <div className="unit-parent">
-                  <div className="temp-display"></div>
-                  <div className="unit" id="temp-display">
-                    <span className="celsius" onClick={convertCelsius}>
-                      C
-                    </span>{" "}
-                    /
-                    <span className="fahrenheit" onClick={convertFahrenheit}>
-                      F
-                    </span>
-                  </div>
-                </div>
-                <div className="units">Units</div>
-              </div>
-              <div className="otherElements">
-                <MidSection
-                  humidity={Math.round(weatherData.humidity)}
-                  wind={Math.round(weatherData.wind)}
-                  pressure={Math.round(weatherData.pressure)}
+        <div>
+          <header>
+            <div class="container-fluid">
+              <div className="newSection">
+                <Search
+                  city={city}
+                  handleSubmit={handleSubmit}
+                  handleCityChange={handleCityChange}
                 />
               </div>
             </div>
+            <div className="row">
+              <div className="mainCity col-sm-6">
+                <h1>{weatherData.city}</h1>
+
+                <div className="date-heading">
+                  <FormattedDate date={weatherData.date} />
+                </div>
+                <div className="temp-display_wrapper">
+                  <div className="temp-display">
+                    <WeatherTemp
+                      temp={Math.round(weatherData.temperature)}
+                      unit={unit}
+                    />
+                  </div>
+                  <div className="description-icon">
+                    <span className="description fs-5">
+                      {weatherData.description}
+                    </span>
+                    <span className="WeatherIcon">
+                      <WeatherIcon code={weatherData.icon} />
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="mainSecondary col-sm-6">
+                <div className="unit-wrapper">
+                  <div className="unit-parent">
+                    <div className="temp-display"></div>
+                    <div className="unit" id="temp-display">
+                      <span className="celsius" onClick={convertCelsius}>
+                        C
+                      </span>{" "}
+                      /
+                      <span className="fahrenheit" onClick={convertFahrenheit}>
+                        F
+                      </span>
+                    </div>
+                  </div>
+                  <div className="units">Units</div>
+                </div>
+                <div className="otherElements">
+                  <MidSection
+                    humidity={Math.round(weatherData.humidity)}
+                    wind={Math.round(weatherData.wind)}
+                    pressure={Math.round(weatherData.pressure)}
+                  />
+                </div>
+              </div>
+            </div>
+          </header>
+          <div className="otherCities d-flex">
+            <span className="cities d-flex">
+              <img src="/images/Sydney.png" alt="Sydney" />
+              <OtherCities city="Sydney" />
+            </span>
+            <span className="cities d-flex">
+              <img src="/images/San Francisco.png" alt="San Francisco" />
+              <OtherCities city="San Francisco" />
+            </span>
+            <span className="cities d-flex">
+              <img src="/images/New York.png" alt="New York" />
+              <OtherCities city="New York" />
+            </span>{" "}
+            <span className="cities d-flex">
+              <img src="/images/London.png" alt="London" />
+              <OtherCities city="London" />
+            </span>
+            <span className="cities d-flex">
+              <img src="/images/Paris.png" alt="Paris" />
+              <OtherCities city="Paris" />
+            </span>
+            <span className="cities d-flex">
+              <img src="/images/Barcelona.png" alt="Barcelona" />
+              <OtherCities city="Barcelona" />
+            </span>{" "}
+            <span className="cities d-flex">
+              <img src="/images/Cape Town.png" alt="Cape Town" />
+              <OtherCities city="Cape Town" />
+            </span>
           </div>
-        </header>
-        <div className="otherCities d-flex">
-          <span className="cities d-flex">
-            <img src="/images/Sydney.png" alt="Sydney" />
-            <OtherCities city="Sydney" />
-          </span>
-          <span className="cities d-flex">
-            <img src="/images/San Francisco.png" alt="San Francisco" />
-            <OtherCities city="San Francisco" />
-          </span>
-          <span className="cities d-flex">
-            <img src="/images/New York.png" alt="New York" />
-            <OtherCities city="New York" />
-          </span>{" "}
-          <span className="cities d-flex">
-            <img src="/images/London.png" alt="London" />
-            <OtherCities city="London" />
-          </span>
-          <span className="cities d-flex">
-            <img src="/images/Paris.png" alt="Paris" />
-            <OtherCities city="Paris" />
-          </span>
-          <span className="cities d-flex">
-            <img src="/images/Barcelona.png" alt="Barcelona" />
-            <OtherCities city="Barcelona" />
-          </span>{" "}
-          <span className="cities d-flex">
-            <img src="/images/Cape Town.png" alt="Cape Town" />
-            <OtherCities city="Cape Town" />
-          </span>
-        </div>
-        <p className="scroll">← Scroll to see more cities →</p>
-        <div>
-          <div className="forecastTitle"> 7 Day Forecasts</div>
-          <Forecast
-            coordinates={weatherData.coordinates}
-            apiKey="5293d8454b519c30f6f6331f38c85b4c"
-          />
+          <p className="scroll">← Scroll to see more cities →</p>
+          <div>
+            <div className="forecastTitle"> 7 Day Forecasts</div>
+            <Forecast
+              coordinates={weatherData.coordinates}
+              apiKey="5293d8454b519c30f6f6331f38c85b4c"
+            />
+          </div>
         </div>
       </div>
     );
