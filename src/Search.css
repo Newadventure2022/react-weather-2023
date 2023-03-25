@@ -13,8 +13,7 @@ input[type="text"] {
   height: 40px;
   padding-left: 16px;
   border-width: 0;
-
-  width: 50rem;
+  width: 49rem;
   padding-right: 70px;
   outline: none;
 }
@@ -25,16 +24,16 @@ input[type="submit"] {
   padding-left: 24px;
   padding-right: 24px;
   border-width: 0;
-  background-color: black;
+  background-color: rgba(252, 225, 164, 0.6);
   box-shadow: 0 5px 24px rgba(1, 1, 1, 0.1);
-  color: white;
+  color: black;
   font-size: 16px;
   position: absolute;
   right: 0px;
   top: 0;
 }
 input[type="submit"]:hover {
-  background-color: whitesmoke;
-  border: solid 1px gray;
+  background-color: rgba(232, 255, 241, 0.6);
+  box-shadow: 0 5px 24px rgba(1, 1, 1, 0.1);
   color: black;
 }

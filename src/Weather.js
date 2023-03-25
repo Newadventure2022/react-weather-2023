@@ -60,15 +60,14 @@ export default function Weather(props) {
     return (
       <div className="weather">
         <header>
-          <div>
-            {" "}
+          <div class="container-fluid">
             <div className="newSection">
               <Search
                 city={city}
                 handleSubmit={handleSubmit}
                 handleCityChange={handleCityChange}
               />
-            </div>{" "}
+            </div>
           </div>
           <div className="row">
             <div className="mainCity col-sm-6">
