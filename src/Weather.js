@@ -139,6 +139,7 @@ export default function Weather(props) {
           </span>
         </div>
         <div>
+          <div className="forecastTitle"> 7 Day Forecasts</div>
           <Forecast
             coordinates={weatherData.coordinates}
             apiKey="5293d8454b519c30f6f6331f38c85b4c"

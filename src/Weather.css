@@ -37,8 +37,8 @@ img {
 }
 
 .temp-display {
-  font-size: 140px;
-  font-weight: 600;
+  font-size: 120px;
+  font-weight: 500;
   clear: both;
 }
 .temp-display_wrapper {
@@ -113,4 +113,8 @@ img {
 .cityText-temp {
   font-size: 12px;
   font-weight: 500;
+}
+.forecastTitle {
+  margin-top: 10px;
+  text-align: justify;
 }
