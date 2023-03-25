@@ -9,7 +9,6 @@ function App() {
       <div className="container">
         <Weather defaultCity="Valencia" />{" "}
       </div>
-
       <Footer />
     </div>
   );

@@ -6,7 +6,6 @@ form {
   display: flex;
   position: relative;
   width: auto;
-  margin-top: 25px;
 }
 input[type="text"] {
   background-color: transparent;
@@ -25,8 +24,7 @@ input[type="submit"] {
   padding-left: 24px;
   padding-right: 24px;
   border-width: 0;
-  border: solid 1px lightgray;
-  background-color: rgba(252, 225, 164, 0.6);
+  background-color: rgba(232, 255, 241, 0.6);
   box-shadow: 0 5px 24px rgba(1, 1, 1, 0.1);
   color: gray;
   font-size: 16px;
@@ -35,7 +33,7 @@ input[type="submit"] {
   top: 0;
 }
 input[type="submit"]:hover {
-  background-color: rgba(232, 255, 241, 0.6);
+  background-color: rgba(244, 253, 248, 0.6);
   box-shadow: 0 5px 24px rgba(1, 1, 1, 0.1);
   color: black;
 }

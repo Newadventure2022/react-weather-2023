@@ -11,7 +11,7 @@ export default function Search(props) {
               <input
                 type="text"
                 id="city-search"
-                placeholder="🔎 Enter a city..."
+                placeholder="🔎 Search Location"
                 autoComplete="off"
                 autoFocus="on"
                 className="form-control"
