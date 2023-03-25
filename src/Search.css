@@ -1,5 +1,4 @@
 .city-search {
-  display: flex;
   margin-bottom: 7px;
 }
 
@@ -14,11 +13,12 @@ input[type="text"] {
   height: 40px;
   padding-left: 16px;
   border-width: 0;
-  box-shadow: 0 5px 24px rgba(1, 1, 1, 0.1);
-  width: 20rem;
+
+  width: 50rem;
   padding-right: 70px;
   outline: none;
 }
+
 input[type="submit"] {
   border-radius: 30px;
   height: 40px;
@@ -26,6 +26,7 @@ input[type="submit"] {
   padding-right: 24px;
   border-width: 0;
   background-color: black;
+  box-shadow: 0 5px 24px rgba(1, 1, 1, 0.1);
   color: white;
   font-size: 16px;
   position: absolute;
@@ -33,6 +34,7 @@ input[type="submit"] {
   top: 0;
 }
 input[type="submit"]:hover {
-  background-color: rgba(252, 225, 164, 0.6);
+  background-color: whitesmoke;
+  border: solid 1px gray;
   color: black;
 }

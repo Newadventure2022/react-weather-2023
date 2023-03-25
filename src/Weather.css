@@ -1,12 +1,16 @@
 header {
   margin-top: 15px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid lightgray;
 }
 ul {
   list-style: none;
 }
 img {
-  height: 50px;
+  height: 60px;
+}
+.newSection {
+  margin-bottom: 25px;
+  width: 100%;
 }
 .weather {
   padding-left: 40px;
@@ -22,6 +26,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-left: 60px;
 }
 
 .date-heading {
@@ -32,7 +37,8 @@ img {
 }
 
 .temp-display {
-  font-size: 150px;
+  font-size: 140px;
+  font-weight: 600;
   clear: both;
 }
 .temp-display_wrapper {
@@ -95,11 +101,16 @@ img {
 .otherCities {
   margin-top: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid lightgray;
   justify-content: space-evenly;
 }
 
 .cityText {
   margin: auto;
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.cityText-temp {
+  font-size: 12px;
+  font-weight: 500;
 }

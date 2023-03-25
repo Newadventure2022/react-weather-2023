@@ -11,7 +11,8 @@ export default function OtherCities(props) {
   if (temperature) {
     return (
       <div className="cityText">
-        {props.city} {Math.round(temperature)}°C
+        {props.city}{" "}
+        <div className="cityText-temp"> {Math.round(temperature)}°C</div>
       </div>
     );
   } else {
