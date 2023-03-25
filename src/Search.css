@@ -4,8 +4,9 @@
 
 form {
   display: block;
-  position: relative;
+  position: sticky;
   margin-left: auto;
+  margin-top: 50px;
 }
 input[type="text"] {
   background-color: transparent;
@@ -13,7 +14,7 @@ input[type="text"] {
   height: 40px;
   padding-left: 16px;
   border-width: 0;
-  width: 49rem;
+  width: 50rem;
   padding-right: 70px;
   outline: none;
 }
@@ -24,9 +25,10 @@ input[type="submit"] {
   padding-left: 24px;
   padding-right: 24px;
   border-width: 0;
+  border: solid 1px lightgray;
   background-color: rgba(252, 225, 164, 0.6);
   box-shadow: 0 5px 24px rgba(1, 1, 1, 0.1);
-  color: black;
+  color: gray;
   font-size: 16px;
   position: absolute;
   right: 0px;

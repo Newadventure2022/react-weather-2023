@@ -6,7 +6,7 @@ ul {
   list-style: none;
 }
 img {
-  height: 60px;
+  height: 80px;
 }
 .newSection {
   margin-bottom: 25px;
@@ -45,7 +45,6 @@ img {
   display: flex;
 }
 .description-icon {
-  /* border: solid red 2px; */
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -117,4 +116,11 @@ img {
 .forecastTitle {
   margin-top: 10px;
   text-align: justify;
+}
+@media (max-width: 600px) {
+  .othercitites {
+    font-size: 40px;
+    max-width: 50%;
+    overflow: hidden;
+  }
 }
