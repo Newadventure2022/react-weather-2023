@@ -149,7 +149,7 @@ export default function Weather(props) {
             <OtherCities city="Cape Town" />
           </span>
         </div>
-        <p className="scroll fs-8">Scroll to see more cities</p>
+        <p className="scroll">← Scroll to see more cities →</p>
         <div>
           <div className="forecastTitle"> 7 Day Forecasts</div>
           <Forecast

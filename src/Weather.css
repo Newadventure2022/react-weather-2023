@@ -112,6 +112,10 @@ img {
   justify-content: space-between;
   overflow-x: scroll;
 }
+.scroll {
+  font-size: 12px;
+  color: gray;
+}
 
 .cityText {
   margin: auto;
@@ -125,9 +129,4 @@ img {
 .forecastTitle {
   margin-top: 10px;
   text-align: justify;
-}
-@media (max-width: 600px) {
-  .othercitites {
-    justify-content: center;
-  }
 }
