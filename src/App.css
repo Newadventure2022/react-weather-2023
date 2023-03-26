@@ -5,6 +5,14 @@
   --fourth-color: rgba(216, 128, 48, 0.4);
 }
 .App {
+  background: radial-gradient(
+    circle at 5% 10%,
+    rgba(251, 159, 162, 0.6) 0%,
+    rgba(252, 225, 164, 0.6) 15.5%,
+    rgba(232, 255, 241, 0.6) 30.5%,
+    rgba(247, 254, 253, 0.6) 93.8%
+  );
+  animation: animate 15s linear infinite;
   margin: 30px 5px;
   text-align: center;
   font-weight: 600;
@@ -13,14 +21,6 @@
 .container {
   max-width: 1040px;
   padding-top: 5px;
-  background: radial-gradient(
-    circle at 5% 10%,
-    rgba(251, 159, 162, 0.6) 0%,
-    rgba(252, 225, 164, 0.6) 15.5%,
-    rgba(232, 255, 241, 0.6) 30.5%,
-    rgba(247, 254, 253, 0.6) 93.8%
-  );
-  animation: animate 10s linear infinite;
 }
 
 .App-logo {

@@ -8,15 +8,19 @@ export default function MidSection(props) {
 
       <div className="weatherElements d-flex">
         <div className="humidity weather-details">
-          Humidity<div className="emoji">𓄺</div>
-          <div>{props.humidity}%</div>
+          <div className="emoji">𓄺</div>
+          <span className="elementWords">Humidity</span>
+          <div className="elementProps">{props.humidity}%</div>
         </div>
         <div className="wind weather-details">
-          Wind<div className="emoji">🌬️</div>
-          <div>{props.wind}km/h</div>
+          <div className="emoji">🌬️</div>
+          <span className="elementWords">Wind</span>
+          <div className="elementProps">{props.wind}km/h</div>
         </div>
         <div className="pressure weather-details">
-          Pressure<div className="emoji">༄</div> <div>{props.pressure}</div>{" "}
+          <div className="emoji">༄</div>{" "}
+          <span className="elementWords">Pressure</span>
+          <div className="elementProps">{props.pressure}</div>{" "}
         </div>
       </div>
     </div>
