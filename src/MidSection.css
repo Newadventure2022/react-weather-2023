@@ -4,8 +4,9 @@
 
 .otherElements {
   margin-bottom: 50px;
-
-  border-radius: 10px;
+  border: 1px solid gray;
+  border-radius: 7px;
+  justify-content: space-around;
 }
 .weatherElements {
   gap: 2px;
@@ -17,7 +18,7 @@
   width: auto;
   flex: 1;
   padding: 10px 0;
-  background-color: whitesmoke;
+  background-color: white;
 }
 .emoji {
   font-size: 40px;
