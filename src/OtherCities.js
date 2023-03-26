@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import axios from "axios";
 
 export default function OtherCities(props) {
@@ -12,7 +13,7 @@ export default function OtherCities(props) {
     return (
       <div className="cityText">
         {props.city}{" "}
-        <div className="cityText-temp"> {Math.round(temperature)}°C</div>
+        <div className="cityText-temp"> {Math.round(temperature)} °C</div>
       </div>
     );
   } else {
