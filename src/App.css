@@ -20,6 +20,7 @@
     rgba(232, 255, 241, 0.6) 30.5%,
     rgba(247, 254, 253, 0.6) 93.8%
   );
+  animation: animate 10s linear infinite;
 }
 
 .App-logo {
@@ -43,5 +44,13 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
   }
 }

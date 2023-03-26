@@ -3,7 +3,7 @@ import Weather from "./Weather";
 import Footer from "./Footer";
 import "./App.css";
 
-function App(props) {
+function App() {
   return (
     <div className="App">
       <div className="backgroundColor ">
