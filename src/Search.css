@@ -3,7 +3,7 @@
 }
 
 form {
-  display: inline-flex;
+  display: flex;
   position: relative;
   width: auto;
 }
@@ -19,20 +19,15 @@ input[type="text"] {
 }
 
 input[type="submit"] {
+  border: 1px solid red;
+  background-color: transparent;
   border-radius: 30px;
   height: 40px;
   padding-left: 24px;
   padding-right: 24px;
-  border-width: 0;
-  background-color: transparent;
   color: gray;
   font-size: 16px;
-  float: left;
+  position: relative;
   right: 0px;
   top: 0;
-}
-input[type="submit"]:hover {
-  background-color: rgba(244, 253, 248, 0.6);
-  box-shadow: 0 5px 24px rgba(1, 1, 1, 0.1);
-  color: black;
 }

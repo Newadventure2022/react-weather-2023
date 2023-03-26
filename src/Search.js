@@ -11,14 +11,14 @@ export default function Search(props) {
               <input
                 type="text"
                 id="city-search"
-                placeholder="🔎 Enter Location"
+                placeholder="Enter Location"
                 autoComplete="off"
                 autoFocus="on"
                 className="form-control"
                 onChange={props.handleCityChange}
                 value={props.city}
               />
-              <input type="submit" id="search-button" value="search" />
+              <input type="submit" id="search-button" value="Search" />
             </form>
           </div>
         </div>
