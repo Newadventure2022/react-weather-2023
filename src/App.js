@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <div className="backgroundColor ">
-        <img src="BG.jpeg" loading="lazy" alt="" className="bg-img"></img>
         <div className="container">
           <Weather defaultCity="Valencia" />{" "}
         </div>
