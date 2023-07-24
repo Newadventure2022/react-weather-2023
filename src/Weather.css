@@ -92,15 +92,15 @@ img {
   border: solid 2px black;
   border-radius: 100%;
   color: white;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 .fahrenheit {
   border: solid 2px black;
   border-radius: 100%;
   color: black;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .otherCities {
