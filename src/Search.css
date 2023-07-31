@@ -1,5 +1,6 @@
 .city-search {
-  margin-bottom: 7px;
+  display: flex;
+  width: 100%;
 }
 
 form {
@@ -10,6 +11,7 @@ form {
 input[type="text"] {
   background-color: white;
   border-color: aliceblue;
+  font-size: 20px;
   padding-left: 16px;
   border-width: 0;
   width: 40rem;
@@ -17,11 +19,12 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-  background-color: black;
+  background-color: rgb(251, 159, 162);
+  border-color: aquamarine;
   border-radius: 4px;
-  height: 50px;
-  padding: 10px 10px;
-  color: white;
+  height: 40px;
+  padding: 5px 5px;
+  color: black;
   font-size: 16px;
   position: absolute;
   right: 0px;
