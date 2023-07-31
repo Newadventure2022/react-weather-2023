@@ -74,12 +74,12 @@ img {
   border-radius: 20px;
   padding: 4px 10px;
   margin-top: 2px;
-  font-size: 15px;
+  font-size: 20px;
   float: right;
 }
 .units {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   display: flex;
   justify-content: flex-end;
   margin-right: 20px;
@@ -92,15 +92,16 @@ img {
   border: solid 2px black;
   border-radius: 100%;
   color: white;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 3px 8px;
 }
 .fahrenheit {
+  background-color: #fff;
   border: solid 2px black;
   border-radius: 100%;
+  font-weight: 700;
   color: black;
-  padding-left: 6px;
-  padding-right: 6px;
+  margin-left: 2px;
+  padding: 3px 8px;
 }
 
 .otherCities {
