@@ -61,7 +61,7 @@ export default function Weather(props) {
       <div className="weather">
         <div>
           <header>
-            <div className="container-fluid">
+            <div className="container">
               <div className="newSection">
                 <Search
                   city={city}

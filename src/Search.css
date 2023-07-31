@@ -29,3 +29,26 @@ input[type="submit"] {
   position: absolute;
   right: 0px;
 }
+@media (max-width: 768px) {
+  form {
+    font-size: small;
+  }
+  input[type="text"] {
+    padding-left: 15px;
+    width: 30rem;
+    margin: 0 auto;
+  }
+  #serch-button {
+    border-radius: 15px;
+    margin-left: 5px;
+    font-size: x-small;
+    text-align: center;
+    padding: 4px 6px;
+  }
+}
+@media (max-width: 500px) {
+  input[type="text"] {
+    width: 15rem;
+    margin: 0 auto;
+  }
+}
